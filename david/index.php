@@ -66,7 +66,7 @@ function loadSlides(slides){
        }
        var toString = " - " + wordText + " (" + book + " " + chapter + ":" + verse + ")"; 
        var slideitem = document.createElement('li');
-       slideitem.innerHTML = "<figure><img src='../../pictures/david/"+slide.filename+"'/><figcaption>"+slide.caption+ toString+"</figcaption></figure>";
+       slideitem.innerHTML = "<figure><img src='./images/"+slide.filename+"'/><figcaption>"+slide.caption+ toString+"</figcaption></figure>";
        document.getElementById("slides").appendChild(slideitem);
     }
 }
