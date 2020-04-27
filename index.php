@@ -35,7 +35,7 @@ $files = scandir($path);
 <br>
 <!--<input type="text" onkeyup="showHint(this.value)" placeholder="filename"/>-->
 <br>
-<select id="filename" placeholder="choose image file">
+<select name="filename" id="filename" placeholder="choose image file">
   <?php
     foreach($files as $file){
      echo "<option value='".$file. "'>".$file."</option>";
