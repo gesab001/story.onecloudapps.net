@@ -25,23 +25,18 @@ function showHint(str) {
 $title = $_POST["title"];
 
 $path    = '../pictures/david';
-$files = scandir($path);
+$files = scandir($path); 
 ?>
 
-<form action="../cgi-bin/story.py" method="post" id="usrform">
+<form action="addstory.py" method="post" id="usrform">
 <input type="text" name="title" value="<?php echo $title;?>" placeholder="title"/>
 <br>
 <textarea rows="4" cols="50" name="caption" placeholder="caption"></textarea>
-<br>
+<br> 
 <!--<input type="text" onkeyup="showHint(this.value)" placeholder="filename"/>-->
 <br>
-<select name="filename" id="filename" placeholder="choose image file">
-  <?php
-    foreach($files as $file){
-     echo "<option value='".$file. "'>".$file."</option>";
-    }
-  ?>
-</select>
+<input type="text" name="url" id="url" placeholder="image url"/>
+<input type="text" name="filename" id="filename" placeholder="image filename"/> 
 <br>
 <input type="text" name="book" placeholder="book"/>
 <br>
